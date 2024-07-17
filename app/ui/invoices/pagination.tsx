@@ -8,7 +8,7 @@ import { generatePagination } from '@/app/lib/utils';
 export default function Pagination({ totalPages }: { totalPages: number }) {
   const currentPage = 1;
   const allPages = generatePagination(currentPage, totalPages);
-const createPageURL = (pageSize) => '#'
+const createPageURL = (pageSize: number) => '#'
   return (
     <div className="inline-flex">
       <PaginationArrow
