@@ -1,3 +1,4 @@
+// @ts-ignore
 import type { NextAuthConfig } from 'next-auth';
 
 export const authConfig = {
@@ -9,6 +10,7 @@ export const authConfig = {
     // while this file is also used in non-Node.js environments
   ],
   callbacks: {
+    // @ts-ignore
     authorized({ auth, request: { nextUrl } }) {
       const isLoggedIn = !!auth?.user;
       const isOnDashboard = nextUrl.pathname.startsWith('/dashboard');
